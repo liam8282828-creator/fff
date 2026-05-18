@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: nova-bot
+    env: node
+    buildCommand: npm install
+    startCommand: node src/index.js
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: API_KEY
+        sync: false
+      - key: BOT_URL
+        sync: false
+      - key: NOVA_API_URL
+        sync: false
+      - key: BOT_KEY
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: PREFIX
+        value: "."
+      - key: BOT_NAME
+        value: "NOVA BOT"
